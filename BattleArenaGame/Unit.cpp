@@ -11,14 +11,16 @@ Unit::~Unit() {
 bool Unit::isAlive()
 {
 	if (HP > 0) {
-		return 1;
+		cout << HP << endl;
+		return true;
 	}
 	else if(HP <= 0) {
-		return 0;
+		return false;
 	}
 }
 
-int  Unit::takeDmg(int Dmg)
+
+int  Unit::takeDmg()
 {
 	HP -= Dmg;
 	return HP;
